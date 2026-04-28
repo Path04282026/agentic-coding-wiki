@@ -68,18 +68,35 @@ Once installed, Claude will automatically activate this skill when you ask about
 
 ## Contributing
 
-This wiki is a living knowledge base. To contribute:
+This wiki is a **living knowledge base** — team members can contribute new materials and Claude will automatically analyze and integrate them.
 
-1. Add new source material to `sources/`
-2. Update relevant dimension analyses in `references/dimensions/`
-3. Keep entity cards current in `references/entities/`
-4. Submit a PR with your changes
+### Adding New Sources (with Claude Code)
+
+```bash
+# 1. Create a branch
+cd ~/.claude/skills/agentic-coding-wiki
+git checkout -b add/my-new-source
+
+# 2. Drop your raw material into sources/
+#    Then ask Claude Code:
+```
+
+```
+> I added a new blog post at sources/blogs/claude-code/new-article.md,
+  please analyze it and integrate it into the wiki
+```
+
+Claude will read the raw material, generate a structured summary, tag dimensions, and update all relevant files. Then submit a PR.
+
+📖 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
 
 ## Structure
 
 ```
 agentic-coding-wiki/
-├── SKILL.md                    ← Skill manifest (Claude reads this first)
+├── SKILL.md                    ← Query skill (auto-triggered for questions)
+├── INGEST.md                   ← Ingest skill (auto-triggered for adding sources)
+├── CONTRIBUTING.md             ← Contribution guide for team members
 ├── references/                 ← Curated analysis (loaded on demand)
 │   ├── overview.md
 │   ├── dimensions/             ← 9 comparative dimensions
