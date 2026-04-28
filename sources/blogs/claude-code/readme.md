@@ -1,0 +1,60 @@
+# Claude Code Blog Subset
+
+Claude Code–related posts only. Format: -{date}|{title}|{file_name}
+
+List
+-2026-04-09|Making Claude Cowork ready for enterprise|cowork-for-enterprise.md
+-2026-04-08|Claude Managed Agents: get to production 10x faster|claude-managed-agents.md
+-2026-04-07|How and when to use subagents in Claude Code|subagents-in-claude-code.md
+-2026-04-02|Harnessing Claude's Intelligence | 3 Key Patterns for Building Apps|harnessing-claudes-intelligence.md
+-2026-03-24|Auto mode for Claude Code|auto-mode.md
+-2026-03-23|Put Claude to work on your computer|dispatch-and-computer-use.md
+-2026-03-19|Product management on the AI exponential|product-management-on-the-ai-exponential.md
+-2026-03-18|Code with Claude comes to San Francisco, London, and Tokyo|code-with-claude-san-francisco-london-tokyo.md
+-2026-03-13|1M context is now generally available for Opus 4.6 and Sonnet 4.6|1m-context-ga.md
+-2026-03-09|Code Review for Claude Code|code-review.md
+-2026-03-03|Improving skill-creator: Test, measure, and refine Agent Skills|improving-skill-creator-test-measure-and-refine-agent-skills.md
+-2026-02-23|How AI helps break the cost barrier to COBOL modernization|how-ai-helps-break-cost-barrier-cobol-modernization.md
+-2026-02-20|Preview, review, and merge with Claude Code|preview-review-and-merge-with-claude-code.md
+-2026-02-12|Claude Enterprise, now available self-serve|self-serve-enterprise.md
+-2026-01-30|Customize Cowork with plugins|cowork-plugins.md
+-2026-01-29|A complete guide to building skills for Claude|complete-guide-to-building-skills-for-claude.md
+-2026-01-29|Measure Claude Code's impact with contribution metrics|contribution-metrics.md
+-2026-01-28|Updates to Claude Team|claude-team-updates.md
+-2026-01-26|How Anthropic uses Claude in Marketing|how-anthropic-uses-claude-marketing.md
+-2026-01-23|When to use multi-agent systems (and when not to)|building-multi-agent-systems-when-and-how-to-use-them.md
+-2026-01-22|Building Agents with Skills: Equipping Agents for Specialized Work|building-agents-with-skills-equipping-agents-for-specialized-work.md
+-2026-01-21|Eight trends defining how software gets built in 2026|eight-trends-defining-how-software-gets-built-in-2026.md
+-2025-12-18|Skills for organizations, partners, the ecosystem|organization-skills-and-directory.md
+-2025-12-12|Making Claude a better electrical engineer|making-claude-a-better-electrical-engineer.md
+-2025-12-11|Claude Code power user customization: How to configure hooks|how-to-configure-hooks.md
+-2025-12-09|How enterprises are building AI agents in 2026|how-enterprises-are-building-ai-agents-in-2026.md
+-2025-12-08|How Anthropic uses Claude in Legal|how-anthropic-uses-claude-legal.md
+-2025-12-08|Claude Code and Slack|claude-code-and-slack.md
+-2025-12-01|The key benefits of transitioning to agentic coding|key-benefits-transitioning-agentic-coding.md
+-2025-11-25|Using CLAUDE.MD files: Customizing Claude Code for your codebase|using-claude-md-files.md
+-2025-11-19|How to create Skills for Claude: steps and examples|how-to-create-skills-key-steps-limitations-and-examples.md
+-2025-11-17|How three YC startups built their companies with Claude Code|building-companies-with-claude-code.md
+-2025-11-12|Improving frontend design through Skills|improving-frontend-design-through-skills.md
+-2025-10-31|What is Model Context Protocol? Connect AI to your world|what-is-model-context-protocol.md
+-2025-10-30|Introduction to agentic coding|introduction-to-agentic-coding.md
+-2025-10-30|How Brex improves code quality and productivity with Claude Code|how-brex-improves-code-quality-and-productivity-with-claude-code.md
+-2025-10-30|Building AI agents in healthcare and life sciences|building-ai-agents-in-healthcare-and-life-sciences.md
+-2025-10-28|Fix software bugs faster with Claude|fix-software-bugs-faster-with-claude.md
+-2025-10-27|How to integrate APIs seamlessly|integrate-apis-seamlessly.md
+-2025-10-20|Claude Code on the web|claude-code-on-the-web.md
+-2025-10-16|Equipping agents for the real world with Agent Skills \ Anthropic|equipping-agents-for-the-real-world-with-agent-skills.md
+-2025-10-16|Introducing Agent Skills|skills.md
+-2025-10-15|How to scale agentic coding across your engineering organization|scaling-agentic-coding.md
+-2025-10-10|Build responsive web layouts|build-responsive-web-layouts.md
+-2025-10-09|Customize Claude Code with plugins|claude-code-plugins.md
+-2025-10-08|Beyond permission prompts: making Claude Code more secure and autonomous|beyond-permission-prompts-making-claude-code-more-secure-and-autonomous.md
+-2025-10-06|Optimize code performance quickly|optimize-code-performance-quickly.md
+-2025-10-01|How enterprises are driving AI transformation with Claude|driving-ai-transformation-with-claude.md
+-2025-09-29|Building agents with the Claude Agent SDK|building-agents-with-the-claude-agent-sdk.md
+-2025-08-25|Piloting Claude in Chrome|claude-for-chrome.md
+-2025-08-20|Claude Code and new admin controls for business plans|claude-code-and-new-admin-controls-for-business-plans.md
+-2025-08-06|Automate security reviews with Claude Code|automate-security-reviews-with-claude-code.md
+-2025-07-24|How Anthropic teams use Claude Code|how-anthropic-teams-use-claude-code.md
+-2025-06-18|Remote MCP support in Claude Code|claude-code-remote-mcp.md
+-2025-05-07|Introducing web search on the Anthropic API|web-search-api.md

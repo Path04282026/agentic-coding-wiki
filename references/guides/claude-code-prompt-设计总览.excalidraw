@@ -1,0 +1,71 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent",
+  "elements": [
+    {"type":"text","id":"title","x":290,"y":20,"text":"Claude Code Prompt 设计总览","fontSize":28,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"Claude Code Prompt 设计总览","autoResize":true},
+    {"type":"text","id":"subtitle","x":190,"y":58,"text":"不是单一提示词，而是『系统提示 + 项目上下文 + 工具说明 + 压缩 + 记忆』的运行时编排","fontSize":16,"fontFamily":1,"strokeColor":"#757575","originalText":"不是单一提示词，而是『系统提示 + 项目上下文 + 工具说明 + 压缩 + 记忆』的运行时编排","autoResize":true},
+
+    {"type":"rectangle","id":"inputsZone","x":40,"y":110,"width":780,"height":210,"backgroundColor":"#f8f9fa","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ced4da","strokeWidth":1,"opacity":60},
+    {"type":"text","id":"inputsZoneLabel","x":60,"y":118,"text":"上游输入：Claude 每轮调用前会装配这些上下文","fontSize":16,"fontFamily":1,"strokeColor":"#495057","originalText":"上游输入：Claude 每轮调用前会装配这些上下文","autoResize":true},
+
+    {"type":"rectangle","id":"claudeMd","x":70,"y":160,"width":130,"height":90,"backgroundColor":"#a5d8ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","boundElements":[{"id":"t_claudeMd","type":"text"},{"id":"a_cm_engine","type":"arrow"}]},
+    {"type":"text","id":"t_claudeMd","x":75,"y":175,"width":120,"height":50,"text":"CLAUDE.md\n项目规则 / 架构 /\n命令 / 工作流","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"claudeMd","originalText":"CLAUDE.md\n项目规则 / 架构 /\n命令 / 工作流","autoResize":true},
+
+    {"type":"rectangle","id":"envInfo","x":225,"y":160,"width":130,"height":90,"backgroundColor":"#c3fae8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#20c997","boundElements":[{"id":"t_envInfo","type":"text"},{"id":"a_env_engine","type":"arrow"}]},
+    {"type":"text","id":"t_envInfo","x":230,"y":175,"width":120,"height":50,"text":"环境信息\n目录 / shell / OS /\ngit 状态","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"envInfo","originalText":"环境信息\n目录 / shell / OS /\ngit 状态","autoResize":true},
+
+    {"type":"rectangle","id":"memory","x":380,"y":160,"width":130,"height":90,"backgroundColor":"#fff3bf","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59f00","boundElements":[{"id":"t_memory","type":"text"},{"id":"a_mem_engine","type":"arrow"}]},
+    {"type":"text","id":"t_memory","x":385,"y":175,"width":120,"height":50,"text":"Memory\n用户偏好 / 长期事实 /\n历史沉淀","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"memory","originalText":"Memory\n用户偏好 / 长期事实 /\n历史沉淀","autoResize":true},
+
+    {"type":"rectangle","id":"toolPrompts","x":535,"y":160,"width":130,"height":90,"backgroundColor":"#d0bfff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#845ef7","boundElements":[{"id":"t_toolPrompts","type":"text"},{"id":"a_tool_engine","type":"arrow"}]},
+    {"type":"text","id":"t_toolPrompts","x":540,"y":175,"width":120,"height":50,"text":"Tool Prompts\n读文件 / 改文件 / bash /\nsubagent 规则","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"toolPrompts","originalText":"Tool Prompts\n读文件 / 改文件 / bash /\nsubagent 规则","autoResize":true},
+
+    {"type":"rectangle","id":"sessionCtx","x":690,"y":160,"width":100,"height":90,"backgroundColor":"#ffd8a8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f08c00","boundElements":[{"id":"t_sessionCtx","type":"text"},{"id":"a_sess_engine","type":"arrow"}]},
+    {"type":"text","id":"t_sessionCtx","x":695,"y":180,"width":90,"height":40,"text":"会话上下文\n当前任务 /\n语言偏好","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"sessionCtx","originalText":"会话上下文\n当前任务 /\n语言偏好","autoResize":true},
+
+    {"type":"rectangle","id":"engine","x":250,"y":380,"width":360,"height":120,"backgroundColor":"#a5d8ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#1c7ed6","boundElements":[{"id":"t_engine","type":"text"},{"id":"a_engine_model","type":"arrow"},{"id":"a_compact_engine","type":"arrow"},{"id":"a_memory_engine","type":"arrow"}]},
+    {"type":"text","id":"t_engine","x":255,"y":405,"width":350,"height":60,"text":"Prompt Assembly Engine\n优先级级联 + 静态/动态分层 + 按需注入 + prompt cache","fontSize":22,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"engine","originalText":"Prompt Assembly Engine\n优先级级联 + 静态/动态分层 + 按需注入 + prompt cache","autoResize":true},
+
+    {"type":"arrow","id":"a_cm_engine","x":135,"y":250,"width":180,"height":130,"points":[[0,0],[180,130]],"strokeColor":"#4a9eed","strokeWidth":2,"endArrowhead":"arrow"},
+    {"type":"arrow","id":"a_env_engine","x":290,"y":250,"width":80,"height":130,"points":[[0,0],[80,130]],"strokeColor":"#20c997","strokeWidth":2,"endArrowhead":"arrow"},
+    {"type":"arrow","id":"a_mem_engine","x":445,"y":250,"width":0,"height":130,"points":[[0,0],[0,130]],"strokeColor":"#f59f00","strokeWidth":2,"endArrowhead":"arrow"},
+    {"type":"arrow","id":"a_tool_engine","x":600,"y":250,"width":-90,"height":130,"points":[[0,0],[-90,130]],"strokeColor":"#845ef7","strokeWidth":2,"endArrowhead":"arrow"},
+    {"type":"arrow","id":"a_sess_engine","x":740,"y":250,"width":-190,"height":130,"points":[[0,0],[-190,130]],"strokeColor":"#f08c00","strokeWidth":2,"endArrowhead":"arrow"},
+
+    {"type":"rectangle","id":"model","x":250,"y":580,"width":360,"height":90,"backgroundColor":"#b2f2bb","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#2b8a3e","boundElements":[{"id":"t_model","type":"text"},{"id":"a_model_tools","type":"arrow"},{"id":"a_model_output","type":"arrow"}]},
+    {"type":"text","id":"t_model","x":255,"y":605,"width":350,"height":40,"text":"Claude 模型\n在丰富上下文里推理，并倾向使用工具","fontSize":22,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"model","originalText":"Claude 模型\n在丰富上下文里推理，并倾向使用工具","autoResize":true},
+
+    {"type":"arrow","id":"a_engine_model","x":430,"y":500,"width":0,"height":80,"points":[[0,0],[0,80]],"strokeColor":"#1c7ed6","strokeWidth":3,"endArrowhead":"arrow","boundElements":[{"id":"t_a_engine_model","type":"text"}]},
+    {"type":"text","id":"t_a_engine_model","x":445,"y":530,"width":70,"height":20,"text":"发给模型","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_engine_model","originalText":"发给模型","autoResize":true},
+
+    {"type":"rectangle","id":"toolsBox","x":660,"y":565,"width":180,"height":105,"backgroundColor":"#d0bfff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#845ef7","boundElements":[{"id":"t_toolsBox","type":"text"},{"id":"a_model_tools","type":"arrow"}]},
+    {"type":"text","id":"t_toolsBox","x":665,"y":590,"width":170,"height":55,"text":"Tools\nRead / Edit / Bash /\nSearch / Subagent","fontSize":20,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"toolsBox","originalText":"Tools\nRead / Edit / Bash /\nSearch / Subagent","autoResize":true},
+
+    {"type":"arrow","id":"a_model_tools","x":610,"y":625,"width":50,"height":0,"points":[[0,0],[50,0]],"strokeColor":"#845ef7","strokeWidth":3,"endArrowhead":"arrow","boundElements":[{"id":"t_a_model_tools","type":"text"}]},
+    {"type":"text","id":"t_a_model_tools","x":615,"y":600,"width":40,"height":20,"text":"调工具","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_model_tools","originalText":"调工具","autoResize":true},
+
+    {"type":"rectangle","id":"outputBox","x":40,"y":565,"width":160,"height":105,"backgroundColor":"#c3fae8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#0ca678","boundElements":[{"id":"t_outputBox","type":"text"},{"id":"a_model_output","type":"arrow"}]},
+    {"type":"text","id":"t_outputBox","x":45,"y":590,"width":150,"height":55,"text":"对用户输出\n回答 / 计划 / 修改 /\n下一步建议","fontSize":20,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"outputBox","originalText":"对用户输出\n回答 / 计划 / 修改 /\n下一步建议","autoResize":true},
+
+    {"type":"arrow","id":"a_model_output","x":250,"y":625,"width":-50,"height":0,"points":[[0,0],[-50,0]],"strokeColor":"#0ca678","strokeWidth":3,"endArrowhead":"arrow","boundElements":[{"id":"t_a_model_output","type":"text"}]},
+    {"type":"text","id":"t_a_model_output","x":205,"y":600,"width":40,"height":20,"text":"生成","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_model_output","originalText":"生成","autoResize":true},
+
+    {"type":"rectangle","id":"compactBox","x":70,"y":400,"width":140,"height":80,"backgroundColor":"#ffc9c9","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#e03131","boundElements":[{"id":"t_compactBox","type":"text"},{"id":"a_compact_engine","type":"arrow"}]},
+    {"type":"text","id":"t_compactBox","x":75,"y":420,"width":130,"height":40,"text":"Compaction\n长对话自动压缩","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"compactBox","originalText":"Compaction\n长对话自动压缩","autoResize":true},
+
+    {"type":"rectangle","id":"longMemoryBox","x":650,"y":400,"width":140,"height":80,"backgroundColor":"#fff3bf","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59f00","boundElements":[{"id":"t_longMemoryBox","type":"text"},{"id":"a_memory_engine","type":"arrow"}]},
+    {"type":"text","id":"t_longMemoryBox","x":655,"y":420,"width":130,"height":40,"text":"Long-term Memory\n长期事实沉淀","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"longMemoryBox","originalText":"Long-term Memory\n长期事实沉淀","autoResize":true},
+
+    {"type":"arrow","id":"a_compact_engine","x":210,"y":440,"width":40,"height":0,"points":[[0,0],[40,0]],"strokeColor":"#e03131","strokeWidth":2,"endArrowhead":"arrow","boundElements":[{"id":"t_a_compact_engine","type":"text"}]},
+    {"type":"text","id":"t_a_compact_engine","x":214,"y":418,"width":32,"height":18,"text":"回注入","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_compact_engine","originalText":"回注入","autoResize":true},
+
+    {"type":"arrow","id":"a_memory_engine","x":610,"y":440,"width":40,"height":0,"points":[[0,0],[40,0]],"strokeColor":"#f59f00","strokeWidth":2,"endArrowhead":"arrow","boundElements":[{"id":"t_a_memory_engine","type":"text"}]},
+    {"type":"text","id":"t_a_memory_engine","x":614,"y":418,"width":32,"height":18,"text":"回注入","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_memory_engine","originalText":"回注入","autoResize":true},
+
+    {"type":"text","id":"footer","x":110,"y":710,"text":"核心理解：Claude Code 的 prompt 设计 = 分层装配 + 工具化执行 + 长上下文治理","fontSize":20,"fontFamily":1,"strokeColor":"#343a40","originalText":"核心理解：Claude Code 的 prompt 设计 = 分层装配 + 工具化执行 + 长上下文治理","autoResize":true}
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}
