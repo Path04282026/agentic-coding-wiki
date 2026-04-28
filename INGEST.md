@@ -128,11 +128,63 @@ Use these to tag every source:
 5. **Comparison tables are mandatory** — update the 3-way table if new evidence changes the picture
 6. **Filenames in kebab-case** — no spaces, all lowercase
 
-## After Ingestion
+## After Ingestion — Publish to GitHub
 
-Report to the user:
-1. What source was added (type, product, date)
-2. Which dimensions were updated
-3. How many new evidence points were added
-4. Any entity pages created or updated
-5. Suggest a PR description if the user wants to submit changes
+### Step 7: Branch, Commit, Push, and Create PR
+
+After all files are created/updated, automatically publish the changes:
+
+```bash
+# 1. Ensure we are in the skill repo
+cd ~/.claude/skills/agentic-coding-wiki  # or the project-level path
+
+# 2. Create a feature branch
+git checkout -b ingest/{type}-{product}-{slug}
+
+# 3. Stage all changes
+git add -A
+
+# 4. Commit with a structured message
+git commit -m "Ingest: {Type} — {Product} — {Title} ({Date})
+
+Source: {URL or description}
+
+New files:
+- {list of created files}
+
+Updated files:
+- {list of modified dimension/entity pages}
+
+Dimensions tagged: {list of dimension numbers}"
+
+# 5. Push to remote
+git push origin ingest/{type}-{product}-{slug}
+
+# 6. Create a Pull Request (requires `gh` CLI)
+gh pr create \
+  --title "Ingest: {Type} — {Product} — {Title}" \
+  --body "## New Source\n- **Type:** {type}\n- **Product:** {product}\n- **Date:** {date}\n- **Dimensions:** {dims}\n\n## Changes\n- {summary of files created/updated}" \
+  --base main
+
+# 7. Return to main branch
+git checkout main
+```
+
+**Important:** Always use a feature branch + PR instead of pushing directly to `main`, so other team members can review the ingested content.
+
+If the user says "push directly" or "no PR needed", you may push to `main` directly:
+
+```bash
+git add -A && git commit -m "Ingest: {Type} — {Product} — {Title} ({Date})" && git push origin main
+```
+
+## Report to User
+
+After completing the full pipeline, report:
+
+1. ✅ **Source added:** type, product, date, URL
+2. 📊 **Dimensions updated:** which dimensions received new evidence
+3. 📝 **Files created:** list of new files
+4. ✏️ **Files updated:** list of modified files with what changed
+5. 👤 **Entities:** any new entity pages created or existing ones updated
+6. 🔗 **GitHub:** PR URL or commit URL for the pushed changes
