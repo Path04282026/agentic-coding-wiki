@@ -3,7 +3,7 @@ tags: [dimension]
 dimension: 01
 title: The Agent Loop
 products: [Claude Code, Codex, OpenClaw]
-source_count: 20
+source_count: 21
 ---
 
 # The Agent Loop
@@ -36,7 +36,9 @@ The architecture is intentionally simple — Boris describes it as "a core query
 
 **Assistant to full agent**: Cat Wu frames the product roadmap as moving Claude Code from assistant behavior into full agent behavior: successful local tasks, every PR green, more PRs landed, and agent completion that includes verification before the human accepts it.
 
-- Source citations: [interview--claude-code--boris-cherny-2025-12-15](sources/interview-claude-code-boris-cherny-2025-12-15.md), [interview--claude-code--boris-cherny-2026-02-17](sources/interview-claude-code-boris-cherny-2026-02-17.md), [interview--claude-code--boris-cherny-2026-03-04](sources/interview-claude-code-boris-cherny-2026-03-04.md), [interview--claude-code--cat-wu-2026-04-23](sources/interview-claude-code-cat-wu-2026-04-23.md), [blog--claude-code--subagents-in-claude-code](sources/blog-claude-code-subagents-in-claude-code.md)
+**Agent SDK as the packaged loop**: Thariq Shihipar's Agent SDK workshop reveals that Anthropic packaged this production-tested agent loop as a public SDK (`claude-agent-sdk`). The `query()` function provides a streaming async interface that abstracts the entire loop — developers just iterate over messages. The SDK embodies the "Harness" concept: loop, tool execution, and state management as a reusable infrastructure layer. "Building agents is not just about LLM capabilities; it is about infrastructure design."
+
+- Source citations: [interview--claude-code--boris-cherny-2025-12-15](sources/interview-claude-code-boris-cherny-2025-12-15.md), [interview--claude-code--boris-cherny-2026-02-17](sources/interview-claude-code-boris-cherny-2026-02-17.md), [interview--claude-code--boris-cherny-2026-03-04](sources/interview-claude-code-boris-cherny-2026-03-04.md), [interview--claude-code--cat-wu-2026-04-23](sources/interview-claude-code-cat-wu-2026-04-23.md), [blog--claude-code--subagents-in-claude-code](sources/blog-claude-code-subagents-in-claude-code.md), [workshop--claude-code--thariq-shihipar-2026-01-05](sources/workshop-claude-code-thariq-shihipar-agent-sdk-2026-01-05.md)
 
 ## Codex
 
@@ -133,3 +135,4 @@ Peter frames himself as "the architect" — he has system-level understanding bu
 - [blog--claude-code--building-multi-agent-systems-when-and-how-to-use-them](sources/blog-claude-code-building-multi-agent-systems-when-and-how-to-use-them.md)
 - [blog--claude-code--introduction-to-agentic-coding](sources/blog-claude-code-introduction-to-agentic-coding.md)
 - [blog--claude-code--building-agents-with-the-claude-agent-sdk](sources/blog-claude-code-building-agents-with-the-claude-agent-sdk.md)
+- [workshop--claude-code--thariq-shihipar-agent-sdk-2026-01-05](sources/workshop-claude-code-thariq-shihipar-agent-sdk-2026-01-05.md)
